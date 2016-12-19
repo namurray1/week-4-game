@@ -1,0 +1,51 @@
+body {
+	background: url("../images/darthvader.jpg");
+}
+
+p {
+
+	text-align: right;
+	color: blue;
+}
+
+.sithlord {
+	float: left;
+	width: 150px;
+}
+
+#vader {
+
+	height: auto;
+	width: auto;
+	max-width: 150px;
+	max-height: 100px;
+}
+
+#sidious {
+
+	height: auto;
+	width: auto;
+	max-width: 150px;
+	max-height: 100px;
+	border-color: yellow;
+
+
+}
+
+#renn{
+
+	height: auto;
+	width: auto;
+	max-width: 150px;
+	max-height: 100px;
+
+
+}
+
+#maul {
+
+	height: auto;
+	width: auto;
+	max-width: 150px;
+	max-height: 100px;
+}
