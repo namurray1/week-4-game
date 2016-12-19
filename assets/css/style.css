@@ -1,16 +1,23 @@
 body {
 	background: url("../images/darthvader.jpg");
+	background-repeat: no-repeat;
 }
 
 p {
 
 	text-align: right;
-	color: blue;
-}
+	color: red;
+ }
+/* Use pseudo classes to trick out the images for the different Sith Lords; hover, animate, etc...*/
 
 .sithlord {
 	float: left;
 	width: 150px;
+}
+
+div.sithlord:hover {
+	background-color: red;
+
 }
 
 #vader {
