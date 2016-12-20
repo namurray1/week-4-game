@@ -1,44 +1,107 @@
-/*var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; //is the array for the letters
-var randomLetter = Math.floor(Math.random() * letters.length - 1);
-var computersPick = letters[randomLetter]; // holds the random letter to be guessed
-var wins = 0;
-var losses = 0;
-var guessRemaining = 10;
-var guesses = [];
-var gameOver = false;
-//var higherOrLower = " "; // holds the text for higher or lower relative to the user's guess
+$(document).ready(function(){
 
-//var lettersGuessed =" "; // holds the current set of letters the player has guessed up to 10
-function resetGame () {
+// Game variables
 
-  computersPick=letters[randomLetter]; 
-  guessRemaining = 10; 
-  guesses = [];
+var sithArray = [];
+var number;
+var vader;
+var sidious;
+var renn;
+var maul;
+var score;
+var wins=0;
+var losses=0;
 
-}
-document.onkeyup = function(event) {
-      
-var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-if(guessRemaining > 0) {
-  if(userGuess === computersPick){
-    wins++;
-    document.getElementById("Wins").innerHTML = "Wins: " + wins;
-    resetGame()
-  } else if (userGuess !== computersPick){
-    guessRemaining--;
-    document.getElementById("GL").innerHTML = "Guesses Left: " + guessRemaining;
-    guesses.push(userGuess)
-    document.getElementById("YG").innerHTML = "Your Guesses so Far: " + guesses;
-  }
-} else {
-  losses++;
-  document.getElementById("Losses").innerHTML = "Losses: " + losses;
-  resetGame()
-}
+// This will reset the game!
 
-  
+resetGame();
+
+//Sith Lord funtion
+
+function setUp(){
+  number = Math.floor(Math.random()*120+19);
+  vader = Math.floor(Math.random()*12+1);
+  sidious = Math.floor(Math.random()*12+1);
+  renn = Math.floor(Math.random()*12+1);
+  maul = Math.floor(Math.random()*12+1);
+  score=0;
+  $("#goal").html(goal);
+  console.log("vader: "+vader);
+  console.log("sidious: "+sidious);
+  console.log("renn: "+renn);
+  console.log("maul: "+maul);
 };
-*/
-document.addEventListener("click", function() {
-  document.getElementById("vader").innerHTML = "Hello World";
+if (jQuery) {
+alert(“jquery is loaded”);
+} else {
+alert(” Not loaded”);
+}
+
+/*
+//Check for outcome of the click=============================================
+
+  function outcome(){
+    if(score===number){
+      $(".outcome").html("YOU ARE STRONG WITH THE FORCE! EMBRANCE THE DARK SIDE");
+      
+      wins++;
+      $("#score").empty();
+      setUp();
+    }
+    else if(score>number){
+      $(".outcome").html("JEDI SCUM!");
+      
+      losses++;
+      $("#score").empty();
+      setUp();
+    }
+
+    $("#wins").html("Wins: "+wins);
+    $("#losses").html("Losses: "+losses);
+  }
+
+
+
+// Gameplay
+
+function playGame(){
+    $("vader").on("click", function(){
+      score+=vader;
+      $("#score").html(score);
+      outcome();
+    });
+
+    $("#sidious").on("click", function(){
+      score+=vader;
+      $("#score").html(score);
+      outcome();
+      
+    });
+
+    $("#renn").on("click", function(){
+      score+=renn;
+      $("#score").html(score);
+      outcome();
+      console.log("score: " +score);
+    });
+
+    $("#maul").on("click", function(){
+      score+=maul;
+      $("#score").html(score);
+      outcome();
+      console.log("score: " +score);
+    });
+
+} 
+
+// Game set up
+
+setUp();
+playGame();
+console.log("number:" +number);
+  
+
+
 });
+*/
+
