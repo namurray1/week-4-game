@@ -10,8 +10,13 @@ p {
  }
 /* Use pseudo classes to trick out the images for the different Sith Lords; hover, animate, etc...*/
 
-button {
+.button {
 	background-color: black
+	border: none;
+	display: inline-block;
+	font-size: 50px;
+
+
 }
 
 .sithlord {
