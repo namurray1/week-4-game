@@ -1,16 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
 // Game variables
-
-var sithArray = [];
 var vader;
 var sidious;
 var renn;
 var maul;
-var randomNumber;
-var score;
-var wins=0;
-var losses=0;
+var randomNumber = 0;
+var score = 0;
+var wins = 0;
+var losses = 0;
 
 // This will reset the game!
 
@@ -18,86 +16,77 @@ var losses=0;
 
 //Sith Lord funtion
 
-function setUp(){
-  randomNumber = Math.floor(Math.random()*120+19);
-  vader = Math.floor(Math.random()*12+1);
-  sidious = Math.floor(Math.random()*12+1);
-  renn = Math.floor(Math.random()*12+1);
-  maul = Math.floor(Math.random()*12+1);
-  score=0;
-  $("#number").html(number);
-  console.log("vader: "+vader);
-  console.log("sidious: "+sidious);
-  console.log("renn: "+renn);
-  console.log("maul: "+maul);
+function setUp() {
+  randomNumber = Math.floor(Math.random()*(120-19 + 19));
+  vader = Math.floor(Math.random()*(12-1) +1);
+  sidious = Math.floor(Math.random()*(12-1) +1);
+  renn = Math.floor(Math.random()*(12-1) +1);
+  maul = Math.floor(Math.random()*(12-1) +1);
+  
+  
 }
+function getRandom() {
+  $("#sith").map(function() {
+    $(this).data("number", randomNumber());
+    console.log($(this).data());
+  });
+}
+/*function getRandom() {
+  $("#sidious").map(function() {
+    $(this).data("number", randomNumber());
+    console.log($(this).data());
+  });
+}
+function getRandom() {
+  $("#kylorenn").map(function() {
+    $(this).data("number", randomNumber());
+    console.log($(this).data());
+  });
+}
+function getRandom() {
+  $("#maul").map(function() {
+    $(this).data("number", randomNumber());
+    console.log($(this).data());
+  });
+}
+
+var randomNumber = randomNumberToGet();
+$("#randomNumber").html(randomNumber);
+
+getRandom();
+
+    $("#vader").click(function(){
+      score += $(this).data("number");
+    $("#your-score").html(score);
+    console.log(score);
+*/
+    
+
+  
 
 //Check for outcome of the click=============================================
 
-  function outcome(){
+    function outcome() {
     if(score===randomNumber){
-      $(".outcome").html("YOU ARE STRONG WITH THE FORCE! EMBRANCE THE DARK SIDE");
+      $("#wins").html("Wins: " + wins);
       wins++;
-      $("#score").empty();
-      setUp();
+      score = 0;
+      //randomNumber = randomNumberToGet();
+      $("theScore").html(score);
+      $("#randomNumber").html(randomNumber);
+      getRandom();
     }
     else if(score>randomNumber){
-      $(".outcome").html("JEDI SCUM!");
       losses++;
-      $("#score").empty();
-      setUp();
+      $("#losses").html("Losses: " + losses);
+      score = 0;
+      $("theScore").html(score);
+      $("#randomNumber").html(randomNumber);
+      getRandom();
     }
 
-    $("#wins").html("Wins: "+wins);
-    $("#losses").html("Losses: "+losses);
+    
   }
-
-
-
-// Gameplay
-
-function playGame(){
-    $(button1).click(function(){
-      valueIncrease(vader);
-      /*click.play();
-      score+=vader;
-      $("#score").html(score);
-      outcome();
-      */
+    
+   
     });
-  }
-
-    $("#sidious").on("click", function(){
-      click.play();
-      score+=vader;
-      $("#score").html(score);
-      outcome();
-      
-    });
-  
-
-    $("#renn").on("click", function(){
-      click.play();
-      score+=renn;
-      $("#score").html(score);
-      outcome();
-      console.log("score: " +score);
-    });
-
-    $("#maul").on("click", function(){
-      click.play();
-      score+=maul;
-      $("#score").html(score);
-      outcome();
-      console.log("score: " +score);
-    });
-
-}
-
-// Game set up
-
-setUp();
-playGame();
-console.log("number:" +number);
-
-});
