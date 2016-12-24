@@ -4,17 +4,76 @@ body {
 }
 
 p {
+	font-family: 'Bungee Hairline', cursive;
+	font-size: 25px;
+	color: #80b3ff;
+	font-weight: bold;
+	
+}
 
-	text-align: right;
-	color: red;
- }
-/* Use pseudo classes to trick out the images for the different Sith Lords; hover, animate, etc...*/
+.col-md-8 > p {
+	border-style: groove;
+	border-width: 5px;
+	border-color: #80b3ff;
+}
+
+.center-block {
+	font-family: 'Bungee Hairline', cursive;
+	font-weight: bold;
+	font-size: 25px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	color: #80b3ff;
+}
+.col-md-4 > h1 {
+	font-family: 'Bungee Hairline', cursive;
+	font-weight: bold;
+	font-size: 25px;
+	color: #80b3ff;
+}
+
+#randomNumber, #wins, #losses, #score {
+	font-family: 'Bungee Hairline', cursive;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+
+span {
+	color: yellow;
+	font-family: 'Russo One', sans-serif;
+}
+
+#sith {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+#instructions {
+	text-align: left;
+	color:red;
+	float: left;
+
+}
+
+#img_container {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid red;
+	height: 100px;
+	width: 100px;
+}
 
 .button {
-	background-color: black
-	border: none;
+	position: absolute;
 	display: inline-block;
-	font-size: 50px;
+	text-align: center;
+	border: 1px solid black;
 
 
 }
@@ -33,27 +92,28 @@ div.sithlord:hover {
 
 	height: auto;
 	width: auto;
-	max-width: 150px;
+	max-width: 100px;
 	max-height: 100px;
+	padding-right: 20px;
 }
 
 #sidious {
 
 	height: auto;
 	width: auto;
-	max-width: 150px;
+	max-width: 100px;
 	max-height: 100px;
-	border-color: yellow;
-
+	padding-right: 20px;
 
 }
 
-#renn{
+#renn {
 
 	height: auto;
 	width: auto;
-	max-width: 150px;
+	max-width: 100px;
 	max-height: 100px;
+	padding-right: 20px;
 
 
 }
@@ -62,6 +122,7 @@ div.sithlord:hover {
 
 	height: auto;
 	width: auto;
-	max-width: 150px;
+	max-width: 100px;
 	max-height: 100px;
+	padding-right: 20px;
 }

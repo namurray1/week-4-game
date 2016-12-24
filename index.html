@@ -3,93 +3,92 @@
 
 	<head>
 			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-			<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+			<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			<title>The Crystal Collector, Sith Lord Edition</title>
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
-<body>
 
-<!--This is where the game begins-->
+	<body>
+		<div class="">
 
-<div class="container-fluid">
-	<div class="row">
-	<div class="col-md-6 title-of-game">
-		<h1>The Crystal Collector, Sith Lord Edition!</h1>
-	</div>
-	</div>
-	<div class="row">
-	</div>
+				<!--This is where the game begins. All one row, center block-->
 
-	<!--Game instructions-->
-
-	<div class="col-md-6 instructions">
-		<p>You will be given a random number at the beginning of the game.</p>
-		<p>There will be pictures of four Star Wars Sith Lords below. </p>
-		<p>Clicking on an image will add a specific amount of points to <em><strong>your</strong></em> total score.</p>
-		<p>The value of each Sith Lord will be hidden from you until you click on it.</p>
-		<p>The value of each Sith Lord will change each time the game starts.</p>
-	</div>
-	</div>
-
-	<!--Computer Pick & Wins to Losses-->
-
-	<div class="center">
-		<div class="target-number-box">
-			<h1 id="randomNumber"></h1>
-		</div>
-			<div class="col-md-">
-				<div class="wins-losses-box container-fluid">
-					<h1>"Wins: "
-						<span id="wins">0</span>
-					</h1>
-					<h1> "Losses: "
-						<span id="losses">0</span>
-					</h1>
-				</div>
-			</div>
-	</div>
-	<!--This is where you pick your Sith Lord-->
-
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 sith-choice text-center">
-						<div class="sithlord">
-						<img class="button1" src="assets/images/vader.jpg">
-						<img class="button2" src="assets/images/darthsidious.png">
-						<img class="button3" src="assets/images/kylorenn.jpg">
-						<img class="button4" src="assets/images/maul.jpg">
-
-							<!--<button id onclick="vader"><img src="assets/images/vader.jpg" class= "img-circle" alt="#" width="150" height="150"></button>
-						</div>
-						<div class="sithlord">
-							<button id onclick="sidious"><img src="assets/images/darthsidious.png" class= "img-circle" alt="#" width="150" height="150"></button>
-						</div>
-						<div class="sithlord">
-							<button id onclick="renn"><img src="assets/images/kylorenn.jpg" class= "img-circle" alt="#" width="150" height="150"></button>
-						</div>
-						<div class="sithlord">
-							<button id onclick="maul"><img src="assets/images/maul.jpg" class= "img-circle" alt="#" width="150" height="150"></button>-->
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--What the current total score is from Sith Lord picks-->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 score-head score-box">
-						<p>Your Total score is: </p>
-						<h1 id="score">0</h1>
+					<div class="center-block">
+						<h1>The Crystal Collector, <span>STAR WARS</span> Sith Lord Edition!</h1>
 					</div>
 				</div>
 			</div>
 	
+				<!--Game instructions put in a row with 8 columns-->
 
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+								<p>You will be given a random number at the beginning of the game.</p>
+								<p>There will be pictures of four Star Wars Sith Lords below. </p>
+								<p>Clicking on an image will add a specific amount of points to <em><strong>your</strong></em> total score.</p>
+								<p>The value of each Sith Lord will be hidden from you until you click on it.</p>
+								<p>The value of each Sith Lord will change each time the game starts.</p>
+						</div>
+					</div>
+				</div>
+	
+
+				<!--Computer Pick & Wins to Losses-->
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<h1>Random Number:
+								<span id="randomNumber">0</span>
+							</h1>
+							<h1>Wins: 
+								<span id="wins">0</span>
+							</h1>
+							<h1>Losses: 
+								<span id="losses">0</span>
+							</h1>
+							<h1>Total Score:
+								<span id="score">0</span>
+						</h1>
+						</div>
+					</div>
+
+						<!--What the current total score is from Sith Lord picks-->
+
+						
+				</div>
+				
+						<!--This is where the player picks the Sith Lord. One row, 4 columns. Hey! This markup needs to be corrected.-->
+
+				
+					<div class="container" id="sith">
+						<div class="row">
+							<div class="col-md-2">
+								<img class=".img-thumbnail" src="assets/images/vader.jpg" class= "img-circle" alt="#" width="150" height="150">
+							</div>
+					
+							<div class="col-md-2">
+								<img class=".img-thumbnail" src="assets/images/darthsidious.png" class= "img-circle" alt="#" width="150" height="150">
+							</div>
+							<div class="col-md-2">
+								<img class=".img-thumbnail" src="assets/images/kylorenn.jpg" class= "img-circle" alt="#" width="150" height="150">
+							</div>
+							<div class="col-md-2">
+								<img class=".img-thumbnail" src="assets/images/maul.jpg" class= "img-circle" alt="#" width="150" height="150">
+							</div>
+						</div>
+					</div>
+		</div>
 
 			
 	
-	<script src="assets/javascript/game.js" type="text/javascript"></script>
-</body>
+		<script src="assets/javascript/game.js" type="text/javascript"></script>
+	</body>
 </html>

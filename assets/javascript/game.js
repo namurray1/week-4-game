@@ -67,16 +67,16 @@ function playGame(){
     });
   }
 
-    /*$("#sidious").on("click", function(){
+    $("#sidious").on("click", function(){
       click.play();
       score+=vader;
       $("#score").html(score);
       outcome();
       
     });
-    */
+  
 
-    /*$("#renn").on("click", function(){
+    $("#renn").on("click", function(){
       click.play();
       score+=renn;
       $("#score").html(score);
@@ -91,8 +91,8 @@ function playGame(){
       outcome();
       console.log("score: " +score);
     });
-*/
-} 
+
+}
 
 // Game set up
 
