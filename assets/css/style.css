@@ -1,6 +1,13 @@
 body {
 	background: url("../images/darthvader.jpg");
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.instructions {
+	border-style: groove;
+	border-width: 5px;
+	border-color: #80b3ff;
 }
 
 p {
@@ -11,13 +18,15 @@ p {
 	
 }
 
-.col-md-8 > p {
+/* This line of code gives the each paragraph a box*/
+/*.col-md-8 > p {
 	border-style: groove;
 	border-width: 5px;
 	border-color: #80b3ff;
 }
-
+*/
 .center-block {
+	border: 25 px;
 	font-family: 'Bungee Hairline', cursive;
 	font-weight: bold;
 	font-size: 25px;
