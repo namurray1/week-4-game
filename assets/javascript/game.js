@@ -1,92 +1,116 @@
-$(document).ready(function() {
+// Global Game Variables
 
-// Game variables
 var vader;
 var sidious;
 var renn;
 var maul;
-var randomNumber = 0;
+var randomNumber;
 var score = 0;
 var wins = 0;
 var losses = 0;
 
-// This will reset the game!
+// Functions
 
-//resetGame();
+$(document).ready(function() {
 
-//Sith Lord funtion
+  function startGame() {
 
-function setUp() {
-  randomNumber = Math.floor(Math.random()*(120-19 + 19));
-  vader = Math.floor(Math.random()*(12-1) +1);
-  sidious = Math.floor(Math.random()*(12-1) +1);
-  renn = Math.floor(Math.random()*(12-1) +1);
-  maul = Math.floor(Math.random()*(12-1) +1);
-  
-  
+//Random Numbers
+
+  randomNumber = Math.floor(Math.random()* 120 ) + 19;
+  vader = Math.floor(Math.random()* 12 ) +1;
+  sidious = Math.floor(Math.random()* 12 ) +1;
+  renn = Math.floor(Math.random()* 12 ) +1;
+  maul = Math.floor(Math.random()* 12 ) +1;
+  score = 0;
+
+  //HTML Elements
+
+  $('#randomNumber').html(randomNumber);
+  $('.1').data('vader');
+  $('.2').data('sidious');
+  $('.3').data('renn');
+  $('.4').data('maul');
+  $('userScore').html('score');
+
+  //Console Test and debugging. As of 12/26/2016 everything is working!
+
+  console.log(randomNumber);
+  console.log(vader);
+  console.log(sidious);
+  console.log(renn);
+  console.log(maul);
+
+$('.1').on('click', function () {
+  console.log(vader);
+});
+
+$('.2').on('click', function () {
+  console.log(sidious);
+});
+
+$('.3').on('click', function () {
+  console.log(renn);
+});
+
+$('.4').on('click', function () {
+  console.log(maul);
+});
+
 }
-function getRandom() {
-  $("#sith").map(function() {
-    $(this).data("number", randomNumber());
-    console.log($(this).data());
+
+function userTotals () {
+
+  $('.1').on('click', function (){
+    score += vader;
+    $('#score').html(score);
+    checkScore();
   });
-}
-/*function getRandom() {
-  $("#sidious").map(function() {
-    $(this).data("number", randomNumber());
-    console.log($(this).data());
+
+  $('.2').on('click', function (){
+    score += sidious;
+    $('#score').html(score);
+    checkScore();
   });
-}
-function getRandom() {
-  $("#kylorenn").map(function() {
-    $(this).data("number", randomNumber());
-    console.log($(this).data());
+
+$('.3').on('click', function (){
+    score += renn;
+    $('#score').html(score);
+    checkScore();
   });
-}
-function getRandom() {
-  $("#maul").map(function() {
-    $(this).data("number", randomNumber());
-    console.log($(this).data());
+
+$('.4').on('click', function (){
+    score += maul;
+    $('#score').html(score);
+    checkScore();
   });
+
 }
 
-var randomNumber = randomNumberToGet();
-$("#randomNumber").html(randomNumber);
+// (If/Else) statements for calculating wins and losses
 
-getRandom();
+    function checkScore()  {
 
-    $("#vader").click(function(){
-      score += $(this).data("number");
-    $("#your-score").html(score);
-    console.log(score);
-*/
-    
 
-  
-
-//Check for outcome of the click=============================================
-
-    function outcome() {
     if(score===randomNumber){
-      $("#wins").html("Wins: " + wins);
+
+      score++;
+
+      $('#wins').html(': ' + wins);
       wins++;
-      score = 0;
-      //randomNumber = randomNumberToGet();
-      $("theScore").html(score);
-      $("#randomNumber").html(randomNumber);
-      getRandom();
+      startGame();
+
     }
-    else if(score>randomNumber){
+      
+      else if(score>randomNumber) {
       losses++;
-      $("#losses").html("Losses: " + losses);
-      score = 0;
-      $("theScore").html(score);
-      $("#randomNumber").html(randomNumber);
-      getRandom();
+      $('#losses').html(': ' + losses);
+      startGame();
+
     }
 
-    
-  }
-    
-   
-    });
+}
+
+      startGame();
+      userTotals();
+});
