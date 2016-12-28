@@ -96,15 +96,15 @@ $('.4').on('click', function (){
 
       score++;
 
-      $('#wins').html(': ' + wins);
+      $('#wins').html(' ' + wins);
       wins++;
       startGame();
 
     }
       
-      else if(score>randomNumber) {
+      else if(score > randomNumber) {
       losses++;
-      $('#losses').html(': ' + losses);
+      $('#losses').html(' ' + losses);
       startGame();
 
     }

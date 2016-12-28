@@ -18,13 +18,13 @@ p {
 	
 }
 
-/* This line of code gives the each paragraph a box*/
-/*.col-md-8 > p {
-	border-style: groove;
-	border-width: 5px;
-	border-color: #80b3ff;
+.btn {
+	border-style: double;
+	border-width: 4px;
+	border-color: black;
+	border-radius: 1px 10px ;
 }
-*/
+
 .center-block {
 	border: 25 px;
 	font-family: 'Bungee Hairline', cursive;
@@ -48,90 +48,18 @@ p {
 	font-size: 25px;
 }
 
-
 span {
 	color: yellow;
 	font-family: 'Russo One', sans-serif;
 }
 
-#sith {
+img {
+
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-
-#instructions {
-	text-align: left;
-	color:red;
-	float: left;
+	margin: auto;
+	height: 200px;
+	width: 200px;
 
 }
 
-#img_container {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	border: 1px solid red;
-	height: 100px;
-	width: 100px;
-}
 
-.button {
-	position: absolute;
-	display: inline-block;
-	text-align: center;
-	border: 1px solid black;
-
-
-}
-
-.sithlord {
-	float: left;
-	width: 150px;
-}
-
-div.sithlord:hover {
-	background-color: red;
-
-}
-
-#vader {
-
-	height: auto;
-	width: auto;
-	max-width: 100px;
-	max-height: 100px;
-	padding-right: 20px;
-}
-
-#sidious {
-
-	height: auto;
-	width: auto;
-	max-width: 100px;
-	max-height: 100px;
-	padding-right: 20px;
-
-}
-
-#renn {
-
-	height: auto;
-	width: auto;
-	max-width: 100px;
-	max-height: 100px;
-	padding-right: 20px;
-
-
-}
-
-#maul {
-
-	height: auto;
-	width: auto;
-	max-width: 100px;
-	max-height: 100px;
-	padding-right: 20px;
-}
