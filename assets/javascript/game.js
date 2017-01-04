@@ -92,19 +92,17 @@ $('.4').on('click', function (){
     function checkScore()  {
 
 
-    if(score===randomNumber){
+    if(score === randomNumber){
 
-      score++;
-
+      
       $('#wins').html(' ' + wins);
       wins++;
       startGame();
 
-    }
-      
-      else if(score > randomNumber) {
-      losses++;
+    } else if(score > randomNumber) {
+
       $('#losses').html(' ' + losses);
+      losses++;
       startGame();
 
     }

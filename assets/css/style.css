@@ -1,7 +1,11 @@
 body {
+	width: 100%;
 	background: url("../images/darthvader.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    
+
 }
 
 .instructions {
@@ -19,10 +23,9 @@ p {
 }
 
 .btn {
-	border-style: double;
-	border-width: 4px;
-	border-color: black;
-	border-radius: 1px 10px ;
+	background-color: black;
+	color: black;
+
 }
 
 .center-block {
@@ -59,7 +62,11 @@ img {
 	margin: auto;
 	height: 200px;
 	width: 200px;
+	/*background-color: black; */
+	background-attachment: fixed;
+    background-size: cover;
 
 }
+
 
 
